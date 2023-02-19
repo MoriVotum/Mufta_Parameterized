@@ -762,29 +762,6 @@ void CMuftaDlg::OnBnClickedCreate()
 	pBaseDef->SetSketch(pSketch);
 	pBaseDef->SetSideParam(false, etBlind, hSize, 0, false);
 	pExtrudeBolt->Create();
-	
-	// называем малыша
-	/*ksEntityCollectionPtr fledgesBolt = pPart->EntityCollection(o3d_edge);
-
-	for (int i = 0; i < fledgesBolt->GetCount(); i++) {
-		ksEntityPtr pEdge = fledgesBolt->GetByIndex(i);
-		ksEdgeDefinitionPtr pEdgeDef = pEdge->GetDefinition();
-
-		if (pEdgeDef->GetOwnerEntity() == pExtrudeBolt) {
-			ksVertexDefinitionPtr pVertexDef1 = pEdgeDef->GetVertex(true);
-			double x1, y1, z1;
-			pVertexDef1->GetPoint(&x1, &y1, &z1);
-
-			if (x1 == 0)
-			{
-				ksFaceDefinitionPtr pFaceDef = pEdgeDef->GetAdjacentFace(true);
-				ksEntityPtr pFace = pFaceDef->GetEntity();
-
-				pFace->Putname("bolt-bottom");
-				pFace->Update();
-			}
-		}
-	}*/
 
 	pDoc->SaveAs("D:\\Works\\Code_Polytech\\Course_2\\Mufta\\Products\\bolt.m3d");
 	pDoc->close();
